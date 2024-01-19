@@ -7,6 +7,9 @@
 # Inherit from sm6375-common
 $(call inherit-product, device/xiaomi/sm6375-common/holi.mk)
 
+# Call the MiuiCamera setup
+$(call inherit-product-if-exists, vendor/xiaomi/stone-miuicamera/products/miuicamera.mk)
+
 # Call the ViperFX Config
 $(call inherit-product-if-exists, packages/apps/ViPER4AndroidFX/config.mk)
 
