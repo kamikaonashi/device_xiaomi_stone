@@ -536,6 +536,7 @@ PRODUCT_PACKAGES += \
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
+    device/xiaomi/stone-kernel \
     hardware/xiaomi \
     hardware/google/interfaces \
     hardware/google/pixel \
