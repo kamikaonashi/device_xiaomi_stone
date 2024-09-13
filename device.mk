@@ -543,7 +543,8 @@ PRODUCT_PACKAGES += \
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
-    hardware/xiaomi
+    hardware/xiaomi \
+    device/xiaomi/stone-kernel
 
 # Telephony
 PRODUCT_PACKAGES += \
