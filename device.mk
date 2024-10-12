@@ -283,7 +283,13 @@ PRODUCT_COPY_FILES += \
 # Kernel
 PRODUCT_SET_DEBUGFS_RESTRICTIONS := true
 PRODUCT_ENABLE_UFFD_GC := false
+ifeq ($(PREBUILT_KERNEL),true)
 PRODUCT_VENDOR_KERNEL_HEADERS := device/xiaomi/stone-kernel/kernel-headers
+
+PRODUCT_SOONG_NAMESPACES += \
+    $(LOCAL_PATH) \
+    device/xiaomi/stone-kernel
+endif
 
 # Keymaster
 PRODUCT_PACKAGES += \
@@ -544,7 +550,6 @@ PRODUCT_PACKAGES += \
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
-    device/xiaomi/stone-kernel \
     hardware/xiaomi \
     hardware/google/interfaces \
     hardware/google/pixel \
