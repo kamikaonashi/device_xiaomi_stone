@@ -351,7 +351,6 @@ DEVICE_PACKAGE_OVERLAYS += \
 
 # Overlays RRO
 PRODUCT_PACKAGES += \
-    BatteryOverlayStone \
     CarrierConfigOverlayStone \
     WifiOverlayStone \
     FrameworksResOverlayStone \
