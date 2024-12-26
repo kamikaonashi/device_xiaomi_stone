@@ -59,5 +59,13 @@ public class BootCompletedReceiver extends BroadcastReceiver {
         FileUtils.enableService(context);
         boolean dcDimmingEnabled = sharedPrefs.getBoolean(DC_DIMMING_ENABLE_KEY, false);
         FileUtils.writeLine(DC_DIMMING_NODE, dcDimmingEnabled ? "1" : "0");
+
+        // ZRAM handling
+        String zramSize = SystemProperties.get("persist.sys.zram.size", "2");
+        String zramCompression = SystemProperties.get("persist.sys.zram.compression", "lz4");
+        if (DEBUG) {
+            Log.d(TAG, "ZRAM size property: " + zramSize);
+            Log.d(TAG, "ZRAM compression property: " + zramCompression);
+        }
     }
 }

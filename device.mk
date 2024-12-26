@@ -514,7 +514,7 @@ PRODUCT_PACKAGES += \
     init.qti.kernel.sh \
     init.target.rc \
     ueventd.qcom.rc \
-    fstab.zram \
+    manage_zram.sh \
     init.xiaomi.rc \
     vendor_modprobe.sh
 
